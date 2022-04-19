@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    position: sticky;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+#div1{
+    background-color: rgb(240, 240, 240);
+    height: 70px;
+    flex-direction: row;
+    display: flex;
+   
+}
+.logo{
+    height: 70px;
+    width: 200px;
+    margin-left: 5%;
+}
+#menu{
+    display: flex;
+    list-style-type: none;
+    color: #504e4e;
+    font-size: larger;
+}
+.link{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #5e5e5e;
+}
+li {
+    margin-left: 15px;
+    
+}
+.nav-list{
+    position: absolute;
+    left: 60%;
+    top: 35%
+}
+.li-menu:hover{
+    background-color: rgb(180, 179, 179);
+      
+}
+.user{
+    position: absolute;
+    left: 87%;
+    top: 33% 
+}
+.bag{
+    position: absolute;
+    left: 90%;
+    top: 33%;
+    width: 25px;
+}
+
+.shop-bag{
+    background:rgb(240, 240, 240);
+    height: 700px;
+    
+}
+.shopping-bag{
+    text-align: center;
+    color:  rgb(173, 132, 115);
+    padding-top: 28px;
+    justify-content: center;
+}
+hr{
+    border: 0px;
+    margin: 1.3rem auto;
+    height:5px;
+    width:90px;
+    background-color:#c9b095b0;
+    border-radius: 5px;
+}
+.table-div{
+    margin: 80px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.remove{
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.info-bag{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background-color: #c5a584b0;
+    font-weight: normal;
+}
+td{
+    padding:  10px 5px;
+}
+td input{
+    width: 30px;
+    height: 20px;
+    padding: 5px;
+}
+td a{
+    text-decoration: none;
+    color:#c5a584b0;
+    font-size: 18px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid #c5a584b0;
+}
+td:last-child{
+    text-align: right;
+}
+.total{
+    
+    font-size: 20px;
+}
+.subtotal{
+    text-align: right;
+}

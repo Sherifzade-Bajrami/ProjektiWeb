@@ -1,0 +1,177 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    position: sticky;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+#div1{
+    background-color: rgb(240, 240, 240);
+    height: 70px;
+    flex-direction: row;
+    display: flex;
+   
+}
+.logo{
+    height: 70px;
+    width: 200px;
+    margin-left: 5%;
+}
+#menu{
+    display: flex;
+    list-style-type: none;
+    color: #504e4e;
+    font-size: larger;
+}
+.link{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #5e5e5e;
+}
+li {
+    margin-left: 15px;
+    
+}
+.nav-list{
+    position: absolute;
+    left: 60%;
+    top: 35%
+}
+.li-menu:hover{
+    background-color: rgb(165, 161, 161);
+      
+}
+.user{
+    position: absolute;
+    left: 87%;
+    top: 33% 
+}
+.bag{
+    position: absolute;
+    left: 90%;
+    top: 33%;
+    width: 25px;
+}
+#Women{
+height: 700px;
+background-color: rgb(240, 240, 240);
+}
+.h-women{
+text-align: center;
+color: #474747;
+padding-top: 28px;
+justify-content: center;
+
+}
+hr{
+border: 0px;
+margin: 1.3rem auto;
+height:5px;
+width:90px;
+background-color:#5f5953b0;
+border-radius: 5px;
+}
+#img1{
+width: 200px;
+}
+#women-p{
+padding: 0 10vw;
+display: flex;
+overflow-x: auto;
+scroll-behavior: smooth;
+
+}
+#women-p::-webkit-scrollbar{
+display: none;
+
+}
+#bag-p{
+flex: 0 0 auto;
+width: 250px;
+height: 450px;
+margin-right: 40px;
+}
+#image-p{
+position: relative;
+width: 100%;
+height: 350px;
+overflow: hidden;
+}
+.img1{
+width: 100%;
+height: 350px;
+object-fit: cover;
+}
+.bag-b{
+position: absolute;
+bottom: 25px;
+left: 40%;
+transform: translate(-50%);
+padding: 10px;
+width: 70%;
+text-transform: capitalize;
+border: none;
+outline: none;
+background: rgb(184, 152, 139);
+border-radius: 5px;
+transition: 0.5s;
+cursor: pointer;
+opacity: 0;
+color: white;
+
+}
+#bag-p:hover .bag-b{
+opacity: 1;
+}
+.bag-b{
+background:rgb(184, 152, 139);
+}
+#price1{
+font-size: 15px;
+color: #928e8e;
+
+
+}
+.collection{
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+color: rgb(173, 119, 98);
+}
+#img2{
+width: 200px;
+height: 330px;
+object-fit: cover;
+}
+#Man{
+    height: 700px;
+   background-color: rgb(240, 240, 240);
+ }
+#h-man{
+text-align: center;
+color: #474747;
+padding-top: 28px;
+justify-content: center;
+
+}
+#man-p{
+padding: 0 10vw;
+display: flex;
+overflow-x: auto;
+scroll-behavior: smooth;
+
+}
+#man-p::-webkit-scrollbar{
+display: none;
+
+}
+#img2{
+width: 200px;
+height: 330px;
+object-fit: cover;
+}
+
+

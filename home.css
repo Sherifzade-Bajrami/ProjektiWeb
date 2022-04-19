@@ -1,0 +1,333 @@
+@import 'product.css';
+@import 'shoppingbag.css';
+
+*{
+    padding: 0;
+    margin: 0;
+
+}
+.navbar{
+    position: sticky;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+#div1{
+    background-color: rgb(240, 240, 240);
+    height: 70px;
+    flex-direction: row;
+    display: flex;
+   
+}
+.logo{
+    height: 70px;
+    width: 200px;
+    margin-left: 5%;
+}
+#menu{
+    display: flex;
+    list-style-type: none;
+    color: #504e4e;
+    font-size: larger;
+}
+.link{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #5e5e5e;
+}
+li {
+    margin-left: 15px;
+    
+}
+.nav-list{
+    position: absolute;
+    left: 63%;
+    top: 35%
+}
+.li-menu:hover{
+    background-color: rgb(165, 161, 161);
+      
+}
+.user{
+    position: absolute;
+    left: 87%;
+    top: 33% 
+}
+.bag{
+    position: absolute;
+    left: 90%;
+    top: 33%;
+    width: 25px;
+}
+.imgbg{
+    
+    width: 1520px;
+    height: calc(100vh - 120px);
+    background-image: url('./image/2.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-input{
+    width: 40%;
+    height: 50px;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid #d1d1d1;
+    text-transform: capitalize;
+    background: none;
+    color:white;
+    outline: none;
+}
+.search-b{
+    width: 100px;
+    height: 52px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background:rgb(184, 152, 139);
+    color: white;
+    text-transform: capitalize;
+    font-size:20px ;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+#Shop{
+    height: 600px;
+    background-color: rgb(240, 240, 240);
+}
+.h-shop{
+    text-align: center;
+    color: #474747;
+    padding-top: 28px;
+    justify-content: center;
+    
+}
+hr{
+    border: 0px;
+    margin: 1.3rem auto;
+    height:5px;
+    width:90px;
+    background-color:#5f5953b0;
+    border-radius: 5px;
+}
+#img1{
+    width: 200px;
+    height: 330px;
+    object-fit: cover;
+}
+#shop-p{
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+}
+#shop-p::-webkit-scrollbar{
+    display: none;
+
+}
+.img1{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+#bag-p{
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+}
+#image-p{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.bag-b{
+    position: absolute;
+    bottom: 25px;
+    left: 40%;
+    transform: translate(-50%);
+    padding: 10px;
+    width: 70%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: rgb(184, 152, 139);
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+    color: white;
+    
+}
+#bag-p:hover .bag-b{
+    opacity: 1;
+}
+.bag-b{
+    background:rgb(184, 152, 139);
+}
+#price1{
+    font-size: 15px;
+    color: #928e8e;
+    
+    
+}
+.collection{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(27, 26, 25);
+}
+
+
+
+.imgbg1{
+    width: 1520px;
+    height: calc(100vh - 80px);
+    background-image: url('./image/cover1.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sale{
+    font-size: 80px;
+    color: #b6aeae;
+}
+.div2{
+     background-color: rgb(240, 240, 240);
+     height: 600px;
+}
+.sales{
+    text-align: center;
+    color: #474747;
+    padding-top: 28px;
+    justify-content: center;
+}
+#sales-p{
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+#sales-p::-webkit-scrollbar{
+    display: none;
+}
+#img3{
+    width: 200px;
+    height: 330px;
+    object-fit: cover;  
+}
+.zbritje-p{
+   position: absolute;
+   background: #fff;
+   padding: 5px;
+   border-radius: 5px;
+   color: #e75353;
+   right: 52px;
+   top: 10px;
+   text-transform: capitalize; 
+}
+.price{
+    font-weight: 900;
+    font-size: 15px;
+}
+.actual-price{
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+.collection-s{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:rgb(36, 34, 34);
+    margin-left: 95px;
+}
+.m-w{
+    height: 600px;
+    background-color:  rgb(24, 21, 27);
+}
+.category-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+.logo1{
+    height: 250px;
+
+}
+.category-ul{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+.category{
+    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    list-style: none;
+}
+.category-title{
+    grid-column: span 2;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.category-link{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.category-link:hover{
+    color: #fff;
+}
+.about{
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.info{
+    text-align: left;
+    color: #fff;
+    padding-left:20px;
+    padding-top: 20px;
+    padding-right: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.social-media{
+    text-align: right;
+    padding-right: 120px;
+    
+}
+.social-link{
+    text-decoration: underline;
+    color: #fff;
+    
+
+}
+.last-div{
+    background-color: rgb(240, 240, 240);
+    height: 40px;
+}
+.last-p{
+    text-align: center;
+    padding-top: 10px;
+    text-transform: capitalize;
+}
+
+
+   
