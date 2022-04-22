@@ -5,10 +5,10 @@
 }
 
 body {
-    background-image: url("./image/loginbg.png");
-    width: 100%;
+    
+    width: 1520px;
     height: calc(100vh - 0px);
-    background-image: url('./image/loginbg.png');
+    background-color:rgb(240, 240, 240);
 }
 
 #overlay {

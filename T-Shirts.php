@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +11,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="./css/product.css">
 </head>
 <body>
     <div id="Man">
-        <h1 id="h-man">Jeans</h1>
+        <h1 id="h-man">T-Shirts</h1>
         <hr>
         <br><br>
         <div id="man-p">

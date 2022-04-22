@@ -1,10 +1,69 @@
+<?php
+
+require_once('./controllers/userController.php');
+session_start();
+session_destroy();
+session_start();
+$dhenat= new Useri();
+
+//////////////Login
+if(isset($_POST['submit'])){
+    $u_email = $_POST["email"];
+    $password = $_POST["password"];
+    $userdata =$dhenat->lexoUserin($u_email);
+    if(empty($u_email)){
+      header("Location: login.php?error=User Email is required");
+      exit();
+    }else if(empty($password)){
+      header("Location: login.php?error=User Password is required");
+    exit();
+    }
+    else{
+    if($userdata != null) {
+         if (password_verify($password, $userdata["password"])) {
+          
+                $_SESSION["email"] = $userdata["email"];
+                $_SESSION["role"] = $userdata["role"];
+                $_SESSION["id"] = $userdata["id"];
+               
+                header("Location: index.php?login=Success");
+            }else{
+              echo "pw gabim";
+            }
+        }
+        else {
+          header("Location: login.php?error=Sorry, those credentials do not match");
+      }
+    }
+    }
+    
+    ////////// Sing Up
+    if(isset($_POST['regjistrohu'])){
+      $email = $_POST["s_email"];
+      $u_p =  password_hash($_POST['s_password'], PASSWORD_BCRYPT);
+      $dhenat->insert($email,$u_p,$u_n);
+          // if (password_verify($u_p, $userdata["password"])) {
+            if (!empty($email)) {
+             
+                  $_SESSION["email"] = $email;
+                  $_SESSION["role"] = "1";
+               
+                
+              }else{
+                header("Location: login.php?error=Sorry, those credentials do not match");
+              }
+         
+      }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Log in</title>
     <style>
 
         *{
@@ -13,7 +72,7 @@
         }
 
         .div3{
-            width: 1350px;
+            width: 1520px;
             height: calc(100vh - 0px);
             background-image: url('./image/loginbg.png');
             background-size: cover;
@@ -202,7 +261,11 @@
             </div>
         </div>
     </div>
-    <script src="login.js"> </script>
+    <script src="./js/login.js"> </script>
+    <script>
+        var user = "<?php echo( isset($_SESSION["role"])? $_SESSION["role"]: "0"); ?>";
+         createNav(user);
+    </script>
     
     
 </body>

@@ -1,5 +1,6 @@
 @import 'product.css';
 @import 'shoppingbag.css';
+@import 'footer.css';
 
 *{
     padding: 0;
@@ -65,7 +66,7 @@ li {
     
     width: 1520px;
     height: calc(100vh - 120px);
-    background-image: url('./image/2.png');
+    background-image: url('../image/2.png');
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -191,7 +192,7 @@ hr{
 .imgbg1{
     width: 1520px;
     height: calc(100vh - 80px);
-    background-image: url('./image/cover1.jpg');
+    background-image: url('../image/cover1.jpg');
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -248,86 +249,15 @@ hr{
     color:rgb(36, 34, 34);
     margin-left: 95px;
 }
-.m-w{
-    height: 600px;
-    background-color:  rgb(24, 21, 27);
-}
-.category-content{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-
-}
-.logo1{
-    height: 250px;
-
-}
-.category-ul{
-    width: 45%;
-    display: flex;
-    justify-content: space-between;
-}
-.category{
-    width: 200px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    list-style: none;
-}
-.category-title{
-    grid-column: span 2;
-    text-transform: capitalize;
-    color: #fff;
-    font-size: 25px;
-    margin-bottom: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.category-link{
+.add-to{
     text-decoration: none;
     text-transform: capitalize;
     color: rgba(255, 255, 255, 0.75);
-    font-size: 18px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.category-link:hover{
-    color: #fff;
-}
-.about{
-    text-align: left;
-    padding-left: 20px;
-    padding-top: 50px;
-    color: #fff;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.info{
-    text-align: left;
-    color: #fff;
-    padding-left:20px;
-    padding-top: 20px;
-    padding-right: 100px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.social-media{
-    text-align: right;
-    padding-right: 120px;
-    
-}
-.social-link{
-    text-decoration: underline;
-    color: #fff;
-    
 
-}
-.last-div{
-    background-color: rgb(240, 240, 240);
-    height: 40px;
-}
-.last-p{
-    text-align: center;
-    padding-top: 10px;
-    text-transform: capitalize;
-}
+
+
+
 
 
    

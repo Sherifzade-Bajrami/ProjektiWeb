@@ -1,10 +1,13 @@
+
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Contact Us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" href="./css/contactus.css">
 </head>
 <body>
     
@@ -31,12 +34,17 @@
                 <p id="success"></p>
             </div>
         </form>
+
         
     </div>
 
 
 
-    <script src="contactus.js"></script>
+    <script src=".js/contactus.js"></script>
+    <script>
+        var user = "<?php echo( isset($_SESSION["role"])? $_SESSION["role"]: "0"); ?>";
+         createNav(user);
+    </script>
   
 </body>
 </html>

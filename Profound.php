@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profound</title>
-   <link rel="stylesheet" href="./home.css">
+   <link rel="stylesheet" href="./css/home.css">
     
 
 </head>
@@ -26,12 +26,12 @@
                
                 <div id="bag-p">
                     <div id="image-p">
-                        <img src="./image/a3.webp" id="img1" alt="">
-                        <button class="bag-b">Add to Bag</button>
+                        <img src="./image/add1.jpg" id="img1" alt="">
+                        <button class="bag-b"><a href="./Product.php" class="add-to">Add to Bag</a></button>
                     </div>
                     <div class="info-p"></div>
                     <h2 id="price1">$25.95</h2>
-                    <p1 class="collection">Bag ~ color black </p1>
+                    <p1 class="collection"> Printed linen blend top</p1> </p1>
                 </div>
                 <div id="bag-p">
                     <div id="image-p">
@@ -103,7 +103,7 @@
                     <div id="image-p">
                         <span class="zbritje-p">50% off</span>
                         <img src="./image/s1.webp" id="img3" alt="">
-                        <button class="bag-b">Add to Bag</button>
+                        <button class="bag-b"><a href="" class="add-to">Add to Bag</a>  </button>
                     </div>
                     <div class="info-p"></div>
                       <span class="price">$19.99</span>
@@ -175,56 +175,12 @@
             </div>   
         </div>
        
-        <div class="m-w">
-            <br>
-            <br>
-            <div class="category-content">
-                <br>
-                <div class="category-ul">
-                    <ul class="category">
-                        <li class="category-title">Men</li>
-                        <li><a href="T-Shirts.html" class="category-link">T-Shirts</a></li>
-                        <li><a href="#"class= "category-link">Shirts</a></li>
-                        <li><a href="Jeans.html" class="category-link">Jeans</a></li>
-                        <li><a href="#" class="category-link">Jacket</a></li>
-                        <li><a href="#" class="category-link">Coat</a></li>
-                        <li><a href="#" class="category-link">Shoes</a></li>
-                        
-                    </ul>
-                    <ul class="category">
-                        <li class="category-title">Women</li>
-                        <li><a href="#" class="category-link">T-Shirts</a></li>
-                        <li><a href="#"class= "category-link">Shirts</a></li>
-                        <li><a href="#" class="category-link">Jeans</a></li>
-                        <li><a href="#" class="category-link">Jacket</a></li>
-                        <li><a href="#" class="category-link">Coat</a></li>
-                        <li><a href="#" class="category-link">Shoes</a></li>
-                        <li><a href="#" class="category-link">Bag</a></li>
-                    </ul>
-                </div>
-                <img src="./image/logo1.png" class="logo1" alt="">
-            </div>
-            <p class="about">About Us</p>
-            <p class="info">Profound është një nga kompanitë më të mëdha ndërkombëtare të modës dhe i përket Inditex,
-                 një nga grupet më të mëdha të shpërndarjes në botë. Klienti është në qendër të modelit tonë unik 
-                 të biznesit, i cili përfshin dizajnin, prodhimin, shpërndarjen dhe shitjet, përmes rrjetit tonë të gjerë
-                 të shitjes. Profound ka një përkushtim të vazhdueshëm ndaj klientëve të saj në mbarë botën për të ofruar
-                 një përvojë të shkëlqyer klienti për të gjithë. Si pjesë e këtyre përpjekjeve, ne jemi të përkushtuar
-                 të ofrojmë një faqe interneti që është e aksesueshme për audiencën më të gjerë të mundshme, pavarësisht
-                 nga teknologjia apo aftësia.</p>
-                 <p class="info">support email - profound.clothing@gmail.com</p>
-                 <p class="info"> telephone - 180 00 00 001</p>
-                 <div class="social-media">
-                     <a href="#" class="social-link">Facebook</a>
-                     <a href="#" class="social-link">Instagram</a>
-                 </div>
-            
-        </div>
-        <div class="last-div">
-            <p class="last-p"><b>Profound, Best apparels online store</b></p>
-        </div>
+       <footer></footer>
         
-        <script src="main.js"> </script>
-        <script src="nav.js"></script>
+        
+        <script src="./js/nav.js"></script>
+        <script src="./js//footer.js"></script>
+        
+
 </body>
 </html>
