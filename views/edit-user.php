@@ -3,13 +3,13 @@ require_once('../controllers/userController.php');
 session_start();
 
 $data= new Useri();
-$msg ="Hello User :". $_SESSION["name"];
+
 
 
 if(isset($_GET['id'])){
     $id=$_GET['id'];
 }
-    $currentUser= $data->edit($id);
+    $currentUser=$data->edit($id);
 
 
     if(isset($_POST['submit'])){

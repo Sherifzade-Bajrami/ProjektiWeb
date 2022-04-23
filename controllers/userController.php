@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'dbConnect.php';
+    require_once ('dbConnect.php');
     //calssa useri
     class Useri extends dbConnect{
         private $id;
@@ -60,14 +60,13 @@
         public function insertoDhenat($request){
             
             
-            $sql="INSERT INTO `user`(,`email`,`password`, `confirm_password`,`role`)  VALUES (:email,:password,:confirm_password, :role)";
+            $sql="INSERT INTO `user`(`email`,`password`,`role`)  VALUES (:email,:password,:confirm_password, :role)";
 
             $stm=$this->dbconn->prepare($sql);
 
         
            $stm->bindParam(':email',$request['email']);
            $stm->bindParam(':password',$request['password']);
-           $stm->bindParam(':confirm_password',$request['confirm_password']);
            $stm->bindParam(':role',$request['role']);
          
 
@@ -80,16 +79,16 @@
             }
             
         }
-        public function insert($e,$p,$c){
+        public function insert($e,$p){
             
             
-            $sql="INSERT INTO user(,`email`,`password`,`confirm_password`)  VALUES (:email,:password, :confirm_password)";
+            $sql="INSERT INTO user(,`email`,`password`,)  VALUES (:email,:password)";
 
             $stm=$this->dbconn->prepare($sql);
 
            $stm->bindParam(':email',$e);
            $stm->bindParam(':password',$p);
-           $stm->bindParam(':confirm_password',$c);
+           
           
          
 
@@ -97,7 +96,7 @@
             if( $stm->execute()) {
                 $message = "Successfully created your account";
             } else {
-                header("Location: login.php?error=Sorry,A problem occurred creating your account");
+                header("Location: Login.php?error=Sorry,A problem occurred creating your account");
                 
             }
             

@@ -1,9 +1,9 @@
 <?php
 require_once '../controllers/productController.php';
 session_start();
-$menu = new productController; //instanca e klases
+$product = new productController; //instanca e klases
 if(isset($_POST['submit'])){// kur behet butoni submit
-    $menu->insert($_POST);//thirre menu dhe insertoje formen me post
+    $product->insert($_POST);//thirre product dhe insertoje formen me post
 }
 
 ?>

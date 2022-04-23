@@ -1,3 +1,13 @@
+<?php
+
+require_once('../controllers/userController.php');
+session_start();
+
+$data= new Useri();
+
+
+
+?>
 
 <style>
 *{
@@ -46,6 +56,7 @@
 }
 </style>
 <div>
+  
     <table class="content-table">
         <thead>
             <tr>

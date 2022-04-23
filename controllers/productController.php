@@ -12,12 +12,13 @@ class productController extends dbConnect{
     //CRUD
 
     public function readData(){
-        $query = $this ->db->pdo->query ('SELECT = from Product');
-         return $query->fetchAll();
+        $query = $this->db->prepare('SELECT * from product');// ruhen te dhenat prej databazes
+        $query->execute();
+        return $query->fetchAll();//fetch sepse rikthehet ne forme te objektit
     }
 
     public function insert($request){
-        $query = $this ->db->pdo->prepare('INSERT INTO User(email,password, confirm password,role)
+        $query = $this ->db->prepare('INSERT INTO User(email,password, confirm password,role)
         VALUES(:email, :password, :confirm password, :role)');  
         $query ->bindParam(':name', $request ['Name']);
         $query ->bindParam(':image', $request ['Image']);
@@ -28,13 +29,13 @@ class productController extends dbConnect{
     }
 
     public function edit($id){
-        $query = $this ->db->pdo->prepare ('SELECT * from product WHERE id = :id');
+        $query = $this ->db->prepare ('SELECT * from product WHERE id = :id');
         $query ->bindParam(':id',$id);
         $query ->execute();
         return $query->fetch();
     }
     public function update($request, $id){
-        $query =$this->db->pdo->prepare ('UPDATE Product SET name=:name, image=:image,  price=:price, added_by=:added_by Where id =:id');
+        $query =$this->db->prepare ('UPDATE Product SET name=:name, image=:image,  price=:price, added_by=:added_by Where id =:id');
         $query ->bindParam(':name', $request ['Name']);
         $query ->bindParam(':image', $request ['Image']);
         $query ->bindParam(':price', $request [' price']);
@@ -45,7 +46,7 @@ class productController extends dbConnect{
     }
 
     public function delete($id){
-        $query=$this ->db->pdo->prepare ('DELETE from Product WHERE id=:id');
+        $query=$this ->db->prepare ('DELETE from Product WHERE id=:id');
         $query ->bindParam(':id',$id);
         $query ->execute(); 
         return header ('Location: productDashboard.php ');
