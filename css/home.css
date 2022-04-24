@@ -15,6 +15,19 @@
     z-index: 9;
 }
 
+.navbar.active{
+    right: 0px;
+}
+
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+#close{
+    display: none;
+}
+
 #div1{
     background-color: rgb(240, 240, 240);
     height: 70px;
@@ -272,6 +285,7 @@ hr{
         background-color:  rgb(240, 240, 240); 
         box-shadow: 0 40px 60px  rgba(0, 0, 0, 0.1);
         padding: 80px 0 0 10px;
+        transition: 0.5s;
     }
 
     #menu li{
@@ -288,11 +302,26 @@ hr{
         top: 33%;
         width: 25px;
     }
+   
     #mobile{
         display: flex;
+        align-items: center;
     }
 
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
 
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }    
 }
 
 

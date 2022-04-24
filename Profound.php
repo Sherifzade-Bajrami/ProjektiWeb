@@ -15,6 +15,12 @@
 </head>
 <body>    
     <nav class="navbar"> </nav>
+
+    <div id="mobile">
+        <i id="bar" class="fas fa-outdent"></i>
+        <a href="./Product.php" class="add-to">Add to Bag</a>
+        <a href="#" id="close"><i class="far fa-times"></i></a>
+    </div>
         
         <div class="imgbg">
             <input type="text" class="search-input" placeholder="S e a r c h">
