@@ -1,6 +1,6 @@
 <?php
 
-require_once('./controllers/userController.php');
+require_once('controllers/userController.php');
 session_start();
 session_destroy();
 session_start();
@@ -8,52 +8,59 @@ $dhenat= new Useri();
 
 //////////////Login
 if(isset($_POST['submit'])){
-    $u_email = $_POST["email"];
-    $password = $_POST["password"];
-    $userdata =$dhenat->lexoUserin($u_email);
-    if(empty($u_email)){
-      header("Location: login.php?error=User Email is required");
-      exit();
-    }else if(empty($password)){
-      header("Location: login.php?error=User Password is required");
-    exit();
-    }
-    else{
-    if($userdata != null) {
-         if (password_verify($password, $userdata["password"])) {
-          
-                $_SESSION["email"] = $userdata["email"];
-                $_SESSION["role"] = $userdata["role"];
-                $_SESSION["id"] = $userdata["id"];
-               
-                header("Location: index.php?login=Success");
-            }else{
-              echo "pw gabim";
-            }
+$u_email = $_POST["email"];
+$password = $_POST["password"];
+
+
+if(empty($u_email)){
+  header("Location: Login.php?error=User Email is required");
+  exit();
+}else if(empty($password)){
+  header("Location: Login.php?error=User Password is required");
+exit();
+}
+else{
+  $userdata =$dhenat->lexoUserin($u_email);
+if($userdata != null) {
+     if (password_verify($password, $userdata["password"])) {
+      
+            $_SESSION["name"] = $userdata["name"];
+            $_SESSION["email"] = $userdata["email"];
+            $_SESSION["role"] = $userdata["role"];
+            $_SESSION["id"] = $userdata["id"];
+           
+            header("Location: Profound.php?Login=Success");
+        }else{
+          echo "Fjalekalimi eshte dhene gabim.";
         }
-        else {
-          header("Location: login.php?error=Sorry, those credentials do not match");
-      }
     }
-    }
-    
-    ////////// Sing Up
-    if(isset($_POST['regjistrohu'])){
-      $email = $_POST["s_email"];
-      $u_p =  password_hash($_POST['s_password'], PASSWORD_BCRYPT);
-      $dhenat->insert($email,$u_p,$u_n);
-          // if (password_verify($u_p, $userdata["password"])) {
-            if (!empty($email)) {
-             
-                  $_SESSION["email"] = $email;
-                  $_SESSION["role"] = "1";
-               
-                
-              }else{
-                header("Location: login.php?error=Sorry, those credentials do not match");
-              }
+    else {
+      header("Location: Login.php?error=Sorry, those credentials do not match");
+  }
+}
+}
+
+////////// Sign Up
+if(isset($_POST['regjistrohu'])){
+  $email = $_POST["s_email"];
+  $u_p =  password_hash($_POST['s_password'], PASSWORD_BCRYPT);
+  $u_n = $_POST["s_name"];
+  $dhenat->insert($email,$u_p,$u_n);
+      
+        if (!empty($email)) {
          
-      }
+
+              $_SESSION["name"] = $u_n;
+              $_SESSION["email"] = $email;
+              $_SESSION["role"] = "1";
+           
+            
+          }else{
+            header("Location: Login.php?error=Sorry, does not match");
+          }
+     
+  }
+
 ?>
 
 
@@ -230,20 +237,23 @@ if(isset($_POST['submit'])){
                     <div class="slide-tab"></div>
                 </div>
                 <div class="form-i">
+                  
                     <form action="#" class="login">
+                    <p id="errorsingin"> tesst</p>
                         <div class="field">
-                            <input type="text" placeholder="Email Address" required id="email">
+                            <input type="text" placeholder="Email Address" required id="emaillogin">
                         </div>
                         <div class="field">
-                            <input type="password" placeholder="Password" required id="password">
+                            <input type="password" placeholder="Password" required id="passwordlogin">
                         </div>
                         <div class="pass-link"><a href="#">Forgot password</a></div>
                         <div class="field">
-                            <input type="submit"  onclick="regex()" value="Login" >
+                            <input type="submit"  onclick="regexLogin()" value="Login" >
                         </div>
                         <div class="register-link">Not a member?<a href="#">Register now</a></div>
                     </form>
                     <form action="#" class="register">
+                        <p id="errorsingup"></p> 
                         <div class="field">
                             <input type="text" placeholder="Email Address" required id="email">
                         </div>
@@ -251,7 +261,7 @@ if(isset($_POST['submit'])){
                             <input type="password" placeholder="Password" required id="password">
                         </div>
                         <div class="field">
-                            <input type="password" placeholder="Confirm Password" required  id="password">
+                            <input type="cpassword" placeholder="Confirm Password" required  id="passwordConfirm">
                         </div>
                         <div class="field">
                             <input type="submit" onclick="regex()" value="Register" >
@@ -262,10 +272,7 @@ if(isset($_POST['submit'])){
         </div>
     </div>
     <script src="./js/login.js"> </script>
-    <script>
-        var user = "<?php echo( isset($_SESSION["role"])? $_SESSION["role"]: "0"); ?>";
-         createNav(user);
-    </script>
+    
     
     
 </body>

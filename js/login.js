@@ -17,24 +17,53 @@ loginBtn.onclick = (()=>{
     registerBtn.click();
     return false;
  });
-function regex(){
-   
-   const regexEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
-   var input= document.getElementById('email').value;
-   var testo = regexEmail.test(input);
+ function regex(){
 
-   var passwordRegex=/^[A-Z]{1} [a-z]{8}\d{1}$ /;
-   var input= document.getElementById('password').value;
-   var testo = passwordRegex.test(input);
-   
-   
-   if(testo){
-       console.log('Te dhenat jane shenuar mire');
-   }
-   else{
-       console.log('Te dhenat nuk jane shenuar mire');
-   }
-}
+	var email = document.getElementById('email').value;
+	var password = document.getElementById('password').value;
+  
+	
+	const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+  
+	
+	if(!regexEmail.test(email)){
+		document.getElementById('errorsingup').innerHTML="Shkruaj nje email!";
+		return false;
+	}
+	else if(!regexPassword.test(password)){
+		document.getElementById('errorsingup').innerHTML ="Shkruaj nje password!";
+		return false;
+	}
+	else{
+		document.getElementById('errorsingup').innerHTML ="Logini eshte kryer me sukses!";
+		return true;
+	}
+  }
+  
+  function regexLogin(){
+	
+	var email = document.getElementById('emaillogin').value;
+	var password = document.getElementById('passwordlogin').value;
+  
+	
+	const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+  
+	if(!regexEmail.test(email)){
+		document.getElementById('errorsingin').innerHTML ="Shkruaj nje email!";
+		return false;
+	}
+	else if(!regexPassword.test(password)){
+		document.getElementById('errorsingin').innerHTML= "Shkruaj nje password!";
+		return false;
+	}
+	else{
+		document.getElementById('errorsingin').innerHTML= "Logini eshte kryer me sukses!";
+		return true;
+	}
+  }
+
 
 
 

@@ -2,7 +2,7 @@
 
 session_start();
 ?>
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -73,9 +73,6 @@ session_start();
             </div>
         </div>
     </div>   
-    <script>
-        var user = "<?php echo( isset($_SESSION["role"])? $_SESSION["role"]: "0"); ?>";
-         createNav(user);
-    </script>     
+        
 </body>
 </html>

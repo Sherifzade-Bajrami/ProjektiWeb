@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+  session_start();
+?>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -180,7 +184,10 @@
         
         <script src="./js/nav.js"></script>
         <script src="./js//footer.js"></script>
-        
 
+        <script>
+    
+
+     
 </body>
 </html>

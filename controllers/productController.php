@@ -51,6 +51,11 @@ class productController extends dbConnect{
         $query ->execute(); 
         return header ('Location: productDashboard.php ');
     }
+    public function slider(){
+        $query = $this->db->prepare('SELECT * from product LIMIT 6');
+        $query->execute();
+        return $query->fetchAll();
+    }
 }
 ?>
 
