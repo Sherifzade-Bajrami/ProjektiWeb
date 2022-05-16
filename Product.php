@@ -5,7 +5,7 @@ if(isset($_GET['id'])){
     $Id=$_GET['id'];
 }
 $menuProduct=new ProductController;
-$product= $menuProduct->edit(':Id');
+$product= $menuProduct->edit($Id);
 $sliderProducts = $menuProduct->slider();
 ?>
 
@@ -27,19 +27,23 @@ $sliderProducts = $menuProduct->slider();
 
     <section class="product-details">
         
-        <div class="image-slider" style="background-image: url('data:image;base64,<?php echo $product["image"]?>');">
+        <div class="image-slider" style="background-image: url('image/<?php echo $product["image"]?>');">
+        
+        
             <div class="product-image">
-                <img src='data:image;base64,<?php echo $product["image"]?>' class="active" alt="">
-                <img src="<?php echo $product["galleryone"]?>" alt="">
-                <img src="<?php echo $product["gallerytwo"]?>" alt="">
-                <img src="<?php echo $product["gallerythree"]?>" alt="">
+            <img src="image/<?php echo $product["image"]?>" class="active" alt="">
+
+              
+                <img src="image/<?php echo $product["galleryone"]?>" alt="">
+                <img src="image/<?php echo $product["gallerytwo"]?>" alt="">
+                <img src="image/<?php echo $product["gallerythree"]?>" alt="">
 
             </div>
         </div>
         </div>
         <div class="details">
             <h2 class="product-brand"><?php echo $product["name"]?></h2>
-            <p class="product-imagee"><?php echo $product["image"]?></p>
+           
             <span class="product-price"><?php echo $product["prices"]?></span>
             
 
@@ -55,7 +59,7 @@ $sliderProducts = $menuProduct->slider();
             <input type="radio" name="size" value="l" checked hidden id="l-size">
             <label for="l-size" class="size-radio-btn ">l</label>
             <input type="radio" name="size" value="xl" checked hidden id="xl-size">
-            <label for="xl-size" class="size-radio-btn ">l</label>
+            <label for="xl-size" class="size-radio-btn ">xl</label>
 
             <button class="btn card-btn">Add To Cart</button>
             

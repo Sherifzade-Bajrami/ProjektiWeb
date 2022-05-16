@@ -18,7 +18,8 @@ if(isset($_POST['submit'])){// kur behet butoni submit
 }
 .div1{
     background: rgb(184, 152, 139);
-    height: 600px;
+   
+    height: 1000px;
     background-size: cover;
     text-align: center;                  
     font-size: 25px;
@@ -27,7 +28,7 @@ if(isset($_POST['submit'])){// kur behet butoni submit
 }
 .create{
     overflow: hidden;
-     max-width: 300px;
+     max-width: 400px;
      background: white;
      padding: 100px;
      border-radius: 20px;
@@ -50,12 +51,26 @@ if(isset($_POST['submit'])){// kur behet butoni submit
         <input class="input" type="text" name="name">
         <br><br>
         Image path:
-        <input type="file" name="image">
+        <input type="text" name="image">
         <br><br>
         Price:
-        <input type="text" name="price">
+        <input type="text" name="prices">
         <br><br>
-        
+        Gallery one:
+        <input type="text" name="galleryone">
+        <br><br>
+        Gallery two:
+        <input type="text" name="gallerytwo">
+        <br><br>
+        Gallery three:
+        <input type="text" name="gallerythree">
+        <br><br>
+        Details:
+        <input type="text" name="details">
+        <br><br>
+        Description:
+        <textarea name="description" cols="30" rows="10"></textarea>
+
         <input hidden type="text" name="added_by" value="<?php echo $_SESSION['name'];?>" >
         <br><br>
         <input class="submit" type="submit" name="submit" value="Save">

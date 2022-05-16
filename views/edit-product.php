@@ -5,7 +5,7 @@ if(isset($_GET['id'])){// e marrim id e row qe e editojme me ane te get
     $productId=$_GET['id'];
 }
     $product=new productController;
-    $currentProduct= $product->edit('id');
+    $currentProduct= $product->edit( $productId);
 
 
     if(isset($_POST['submit'])){// kur bejme submit thirre metoden update
@@ -23,7 +23,7 @@ if(isset($_GET['id'])){// e marrim id e row qe e editojme me ane te get
 }
 .div1{
     background: rgb(184, 152, 139);
-    height: 700px;
+    height: 2000px;
     background-size: cover;
     text-align: center;                  
     font-size: 25px;
@@ -54,16 +54,35 @@ if(isset($_GET['id'])){// e marrim id e row qe e editojme me ane te get
 <form  class="edit" method="post" enctype ="multipart/form-data"  >
     Image: <br>
     <!-- type file dergimi i imazhit ne databaze dhe kthimi i imazht nga databaza-->
-    <img src='data:image;base64,<?php echo $currentProduct["image"]?>' width="300px">
+    <img src="../image/<?php echo $currentProduct["image"]?>" width="300px">
     <br>
-    <input type="file" name="image" >
+    <input type="text" name="image" value="<?php echo  $currentProduct['image'];?>" >
     <br>
      Name:
     <input type="text" name="name" value="<?php echo  $currentProduct['name'];?>" >
     <br>
     Price:
-    <input type="text" name="price" value="<?php echo  $currentProduct['price'];?>" >
+    <input type="text" name="prices" value="<?php echo  $currentProduct['prices'];?>" >
     <br>
+       Gallery one:
+                
+        <img src="../image/<?php echo $currentProduct['galleryone'];?>" alt=""width="300px" height="250px"> 
+         <input type="text" name="galleryone" value="<?php echo  $currentProduct['galleryone'];?>" >
+        <br>
+        Gallery two:
+        <img src="../image/<?php echo $currentProduct['gallerytwo'];?>" alt=""width="300px" height="250px"> 
+        <input type="text" name="gallerytwo" value="<?php echo  $currentProduct['gallerytwo'];?>" >
+        <br>
+        Gallery three:
+        <img src="../image/<?php echo $currentProduct['gallerythree'];?>" alt=""width="300px" height="250px"> 
+        <input type="text" name="gallerythree" value="<?php echo  $currentProduct['gallerythree'];?>" >
+    <br>
+    Description:
+    <input type="text" name="description" value="<?php echo  $currentProduct['description'];?>" >
+    <br>
+    Details:
+    <input type="text" name="details" value="<?php echo  $currentProduct['details'];?>" >
+
     <input hidden type="text" name="added_by" value="<?php echo $_SESSION['name'];?>" >
     <br>
     <input type="submit" class="submit" name="submit" value="Update" >

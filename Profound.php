@@ -1,7 +1,10 @@
-<?php
-  session_start();
-?>
 
+<?php
+require_once('controllers/productController.php');
+session_start();
+$menuProduct=new ProductController;
+$products=$menuProduct->readData();
+?>
 
 <html lang="en">
 <head>
@@ -34,69 +37,19 @@
     
             <div id="shop-p">
                
-                <div id="bag-p">
+
+            <?php foreach($products as $product):?>
+            
+                        <div id="bag-p">
                     <div id="image-p">
-                        <img src="./image/add1.jpg" id="img1" alt="">
-                        <button class="bag-b"><a href="./Product.php" class="add-to">Add to Bag</a></button>
+                        <img src="image/<?php echo $product['image'];?>" id="img1" alt="">
+                        <button class="bag-b"><a href="./Product.php?id=<?php echo $product['id'];?>" class="add-to">Add to Bag</a></button>
                     </div>
                     <div class="info-p"></div>
-                    <h2 id="price1">$25.95</h2>
-                    <p1 class="collection"> Printed linen blend top</p1> </p1>
+                    <h2 id="price1">$<?php echo $product['prices'];?></h2>
+                    <p1 class="collection"> <?php echo $product['name'];?></p1> </p1>
                 </div>
-                <div id="bag-p">
-                    <div id="image-p">
-                        <img src="./image/m2.webp" id="img1" alt="">
-                        <button class="bag-b">Add to Bag</button>
-                    </div>
-                    <div class="info-p"></div>
-                    <h2 id="price1">$42.95</h2>
-                    <p1 class="collection">Collar Jacket</p1>
-                </div>
-                <div id="bag-p">
-                    <div id="image-p">
-                        <img src="./image/a4.webp" id="img1" alt="">
-                        <button class="bag-b">Add to Bag</button>
-                    </div>
-                    <div class="info-p"></div>
-                    <h2 id="price1">$22.95</h2>
-                    <p1 class="collection">Bag</p1>
-                </div>
-                <div id="bag-p">
-                    <div id="image-p">
-                        <img src="./image/m1.webp" id="img1" alt="">
-                        <button class="bag-b">Add to Bag</button>
-                    </div>
-                    <div class="info-p"></div>
-                    <h2 id="price1">$45.95</h2>
-                    <p1 class="collection">New collection - Jacket</p1>
-                </div>
-                <div id="bag-p">
-                    <div id="image-p">
-                        <img src="./image/a5.webp" id="img1" alt="">
-                        <button class="bag-b">Add to bag</button>
-                    </div>
-                    <div class="info-p"></div>
-                    <h2 id="price1">$45.95</h2>
-                    <p1 class="collection">High heeled shoes</p1>
-                </div>
-                <div id="bag-p">
-                    <div id="image-p">
-                        <img src="./image/m10.webp" id="img1" alt="">
-                        <button class="bag-b">Add to Bag</button>
-                    </div>
-                    <div class="info-p"></div>
-                    <h2 id="price1">$99.95</h2>
-                    <p1 class="collection">Fit Coat</p1>
-                </div>
-                <div id="bag-p">
-                    <div id="image-p">
-                        <img src="./image/a6.webp" id="img1" alt="">
-                        <button class="bag-b">Add to Bag</button>
-                    </div>
-                    <div class="info-p"></div>
-                    <h2 id="price1">$42.95</h2>
-                    <p1 class="collection">High heel shoes</p1>
-                </div>
+                <?php endforeach;?>
             </div>
         </div>
         

@@ -14,7 +14,7 @@ session_start();
   width: 100%;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 200px rgba(0, 0, 0, 0.15);
 }
 
 .content-table thead tr {
@@ -55,6 +55,7 @@ session_start();
             <th>Product name</th>
               <th>Product image</th>
               <th>Product price</th>
+              <th></th>  <th></th>
             </tr>
         </thead>
         <tbody>
@@ -64,8 +65,10 @@ session_start();
           foreach($allMenu as $menu):?>
           <tr>
           <td><?php echo $menu['name'];?></td>
-            <td> <img src='data:image;base64,<?php echo $menu["image"]?>' width="300px"></td>
-            <td><?php echo $menu['price'];?></td>
+            <td> <img src='../image/<?php echo $menu["image"]?>' width="300px"></td>
+            <td><?php echo $menu['prices'];?></td>
+            <td><a href="edit-product.php?id=<?php echo $menu['id'];?>">Edit</a></td>
+            <td><a href="delete-product.php?id=<?php echo $menu['id'];?>">Delete</a></td>
             
           </tr>
           <?php endforeach;?>

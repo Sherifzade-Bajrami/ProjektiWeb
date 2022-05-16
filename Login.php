@@ -71,6 +71,8 @@ if(isset($_POST['regjistrohu'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
+    <link rel="stylesheet" href="./css/home.css">
+
     <style>
 
         *{
@@ -96,6 +98,12 @@ if(isset($_POST['regjistrohu'])){
              border-radius: 20px;
              box-shadow: 0px 15px 20px  rgba(0, 0, 0, 0.1);
             }
+        #errorsingin{
+            color:red;
+        }
+        #errorsingup{
+            color:red;
+        }
         .Login .title-text{
              display: flex;
               width: 200%; 
@@ -220,8 +228,9 @@ if(isset($_POST['regjistrohu'])){
     </style>
 </head>
 <body>
-    
+<nav class="navbar"> </nav>
     <div class="div3">
+   
         <div class="Login">
             <div class="title-text">
                 <div class="title login">Login Form</div>
@@ -239,7 +248,7 @@ if(isset($_POST['regjistrohu'])){
                 <div class="form-i">
                   
                     <form action="#" class="login">
-                    <p id="errorsingin"> tesst</p>
+                    <p id="errorsingin"> </p>
                         <div class="field">
                             <input type="text" placeholder="Email Address" required id="emaillogin">
                         </div>
@@ -272,6 +281,7 @@ if(isset($_POST['regjistrohu'])){
         </div>
     </div>
     <script src="./js/login.js"> </script>
+    <script src="./js/nav.js"></script>
     
     
     
